@@ -4,15 +4,18 @@ import { useForm } from '../../hooks/useForm'
 import { useDispatch, useSelector } from 'react-redux'
 import { startLoginEmailPassword, startGoogleLogin } from '../../actions/auth'
 
+
+
+
 export const LoginScreen = () => {
 
     const dispatch = useDispatch();
     const {loading} = useSelector( state => state.ui);
-    
+    const Swal = require('sweetalert2');
 
     const [formValues, handleInputChange] = useForm({
         email: 'raul@ragoal.com',
-        password: '123456'
+        password: ''
     });
 
     const {email, password} = formValues;
