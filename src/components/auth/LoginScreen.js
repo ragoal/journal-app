@@ -11,7 +11,7 @@ export const LoginScreen = () => {
 
     const dispatch = useDispatch();
     const {loading} = useSelector( state => state.ui);
-    const Swal = require('sweetalert2');
+    
 
     const [formValues, handleInputChange] = useForm({
         email: 'raul@ragoal.com',
